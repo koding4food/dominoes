@@ -1,9 +1,11 @@
 import React from 'react'
-import { TabNavigator } from 'react-navigation'
+import { TabNavigator, StackNavigator } from 'react-navigation'
 import { View, StyleSheet } from 'react-native'
 
 import Welcome from './screens/Welcome'
 import MainMenu from './screens/MainMenu'
+import Game from './screens/Game'
+import GameSettings from './screens/GameSettings'
 
 const App = () => {
   const MainNavigator = TabNavigator({
@@ -11,6 +13,12 @@ const App = () => {
     main: {
       screen: TabNavigator({
         menu: { screen: MainMenu },
+        game: {
+          screen: StackNavigator({
+            play: { screen: Game },
+            settings: { screen: GameSettings },
+          }),
+        },
       }, {
         swipeEnabled: false,
         lazy: true,
