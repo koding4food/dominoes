@@ -1,10 +1,16 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { TabNavigator } from 'react-navigation'
 
-const App = () => (
-  <View>
-    <Text>This is the entry point</Text>
-  </View>
-)
+import Welcome from './screens/Welcome'
+
+const App = () => {
+  const MainNavigator = TabNavigator({
+    welcome: { screen: Welcome },
+  })
+
+  return (
+    <MainNavigator />
+  )
+}
 
 export default App
