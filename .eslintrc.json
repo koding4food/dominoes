@@ -1,0 +1,10 @@
+{
+    "plugins": [
+        "react-native"
+    ],
+    "extends": "airbnb",
+    "rules": {
+        "semi": ["error", "never"],
+        "react/jsx-filename-extension": "off"
+    }
+}
