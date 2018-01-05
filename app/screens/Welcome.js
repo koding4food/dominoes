@@ -10,7 +10,8 @@ const slideItems = [
 
 class Welcome extends Component {
   handleComplete = () => {
-    console.log('copmpleted')
+    console.log('completed')
+    this.props.navigation.navigate('main')
   }
 
   render() {

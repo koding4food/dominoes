@@ -3,12 +3,26 @@ import { TabNavigator } from 'react-navigation'
 import { View, StyleSheet } from 'react-native'
 
 import Welcome from './screens/Welcome'
+import MainMenu from './screens/MainMenu'
 
 const App = () => {
   const MainNavigator = TabNavigator({
     welcome: { screen: Welcome },
+    main: {
+      screen: TabNavigator({
+        menu: { screen: MainMenu },
+      }, {
+        swipeEnabled: false,
+        lazy: true,
+      }),
+    },
   }, {
+    navigationOptions: {
+      tabBarVisible: false,
+    },
     lazy: true,
+    swipeEnabled: false,
+    animationEnabled: false,
   })
 
   return (
