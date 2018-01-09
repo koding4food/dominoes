@@ -37,9 +37,10 @@ const Menu = ({ title, menuItems }) => (
     {map(({ text, type, name }) => (
       <Button
         buttonStyle={menuStyles.button}
+        textStyle={menuStyles.bottomText}
         key={text}
         large
-        icon={{name, type }}
+        icon={{ name, type }}
         title={text}
       />
     ), menuItems)}

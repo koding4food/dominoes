@@ -15,6 +15,7 @@ const SlideItem = ({ text, shouldAllowAction, onComplete }) => (
     {shouldAllowAction &&
       <Button
         buttonStyle={slideStyles.buttonStyle}
+        textStyle={slideStyles.textStyle}
         title="Ready"
         raised
         onPress={onComplete}

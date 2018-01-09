@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native'
+import { primary, darkPrimary, text } from '../colors'
 
 const screenWidth = Dimensions.get('window').width
 
@@ -8,18 +9,21 @@ const slideStyles = StyleSheet.create({
   },
   slideItem: {
     alignItems: 'center',
-    backgroundColor: '#036BF4',
+    backgroundColor: primary,
     flex: 1,
     justifyContent: 'center',
     width: screenWidth,
   },
   slideText: {
-    color: 'white',
+    color: text,
     fontSize: 30,
     textAlign: 'center',
   },
   buttonStyle: {
-    backgroundColor: '#6495ED',
+    backgroundColor: darkPrimary,
+  },
+  textStyle: {
+    color: text,
   },
 })
 
