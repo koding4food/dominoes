@@ -11,30 +11,34 @@ const buttons = [
     name: 'play',
     text: 'Resume Game',
     type: 'font-awesome',
+    onAction: 'game',
   },
   {
     name: 'gamepad',
     text: 'New Game',
     type: 'font-awesome',
+    onAction: 'game',
   },
   {
     name: 'cogs',
     text: 'Settings',
     type: 'font-awesome',
+    onAction: 'settings',
   },
   {
     name: 'info-circle',
     text: 'About',
     type: 'font-awesome',
+    onAction: 'about ',
   },
 ]
 
-const Menu = ({ title, menuItems }) => (
+const Menu = ({ title, menuItems, navigate }) => (
   <View style={menuStyles.container}>
     <View>
       <Text style={menuStyles.title}>{title}</Text>
     </View>
-    {map(({ text, type, name }) => (
+    {map(({ text, type, name, onAction }) => (
       <Button
         buttonStyle={menuStyles.button}
         textStyle={menuStyles.bottomText}
@@ -42,6 +46,7 @@ const Menu = ({ title, menuItems }) => (
         large
         icon={{ name, type }}
         title={text}
+        onPress={() => navigate(onAction)}
       />
     ), menuItems)}
   </View>

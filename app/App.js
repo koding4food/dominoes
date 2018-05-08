@@ -15,7 +15,7 @@ const App = () => {
         menu: { screen: MainMenu },
         game: {
           screen: StackNavigator({
-            play: { screen: Game },
+            game: { screen: Game },
             settings: { screen: GameSettings },
           }),
         },
